@@ -360,7 +360,7 @@ a {
 
 @media (max-width: 576px) {
    .post-card .message {
-      font-size: 15px;
+      font-size: 2.1vh;
    }
 
    /* .post-card .next-btn {
