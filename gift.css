@@ -1,0 +1,398 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+@font-face {
+   font-family: "Rubik-Bold";
+   src: url(./Fonts/Rubik-Bold.ttf);
+}
+
+@font-face {
+   font-family: "Rubik-Regular";
+   src: url(./Fonts/Rubik-Regular.ttf);
+}
+
+@font-face {
+   font-family: "Sean";
+   src: url(./Fonts/SVN-Hand\ Of\ Sean\ Pro.otf);
+}
+
+:root {
+   --blue: #27c1fd;
+   --pink: #e8ffea;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-image: url(./image/bg.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-color: var(--pink);
+   background-blend-mode: exclusion;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   min-height: 100vh;
+}
+
+p,
+a {
+   margin: 0;
+   text-decoration: none;
+   color: inherit;
+}
+
+.overlay {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, 0.7);
+   backdrop-filter: blur(2px);
+   z-index: 10;
+   opacity: 0;
+   pointer-events: none;
+   transition: 0.5s ease-in-out;
+}
+
+.overlay.show {
+   opacity: 1;
+}
+
+.inner {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 24px;
+   transition: 0.35s ease-in-out;
+}
+
+.inner > .row {
+   max-height: 90vh;
+   height: 100%;
+   aspect-ratio: 3 / 5;
+   background-image: url(./image/bg1.png);
+   background-size: cover;
+   background-position: center;
+   border-radius: 24px;
+   border: 12px solid #ffffff;
+   overflow: hidden;
+   flex-direction: column;
+   justify-content: flex-end;
+   gap: 16px;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.462);
+}
+
+.inner .gift {
+   height: 30%;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.inner .gift .gift-top {
+   position: absolute;
+   width: 100%;
+   top: 0;
+   z-index: 5;
+}
+
+.gift-top img,
+.gift-body img {
+   width: 100%;
+   object-fit: contain;
+}
+
+.inner .gift .gift-body {
+   position: absolute;
+   width: 100%;
+   top: 12%;
+   z-index: 0;
+}
+
+.inner .open-gift {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 10%;
+   margin-bottom: 20px;
+   transition: 0.35s ease-in-out;
+}
+
+.open-gift img {
+   height: 100%;
+   object-fit: contain;
+   transform: scale(1.2);
+   cursor: pointer;
+}
+
+.open-gift:hover {
+   transform: scale(0.95);
+}
+
+.open-gift:active {
+   transform: scale(0.8);
+}
+
+.post-card {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 100;
+   transform: translateY(-20%) scale(0.1);
+   opacity: 0;
+   transform-origin: bottom;
+   transform-style: preserve-3d;
+   transition: 0.25s ease-out;
+   padding: 24px;
+   height: 90%;
+   aspect-ratio: 7 / 10;
+}
+
+@keyframes postcard {
+   0% {
+      opacity: 0;
+      transform: translateY(-20%) scale(0.1);
+   }
+   30% {
+      opacity: 0.1;
+   }
+   50% {
+      opacity: 0.5;
+      transform: translateY(-40%) scale(0.4);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+   }
+}
+.post-card.show {
+   animation: postcard 1s ease-in-out forwards;
+}
+
+.post-card > .row {
+   height: 100%;
+   max-height: 90vh;
+   aspect-ratio: 7/ 10;
+   background-image: url(./image/postcard.png);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+   transition: 0.5s ease-in;
+   transform: rotateY(0);
+   transform-style: preserve-3d;
+}
+
+.post-card .front {
+   padding: 4vh;
+   padding-top: 6vh;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   backface-visibility: hidden;
+}
+
+.post-card.flip > .row {
+   transform: rotateY(180deg);
+   transform-style: preserve-3d;
+}
+
+.post-card .back {
+   padding: 4vh;
+   padding-top: 6vh;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   transform: rotateY(180deg);
+   backface-visibility: hidden;
+}
+
+.post-card .close-btn {
+   position: absolute;
+   top: 0;
+   right: 0%;
+   width: 12%;
+   aspect-ratio: 1 / 1;
+   padding: 0;
+   cursor: pointer;
+   transition: 0.35s ease-in-out;
+}
+
+.close-btn:hover {
+   transform: scale(0.95);
+}
+
+.post-card .close-btn img {
+   width: 100%;
+   object-fit: contain;
+}
+
+.post-card .image {
+   width: 100%;
+   height: fit-content;
+   overflow: hidden;
+}
+
+.post-card .image img {
+   border: 3px dashed #631837;
+   border-radius: 8px;
+   width: 100%;
+   object-fit: contain;
+}
+
+.post-card .image video {
+   border: 3px dashed #631837;
+   border-radius: 8px;
+   width: 100%;
+   object-fit: contain;
+}
+
+.post-card .message {
+   font-size: 15px;
+   color: #631837;
+   font-family: "Sean";
+   padding: 8px 16px;
+}
+
+.post-card .next-btn {
+   font-family: "Sean";
+   display: flex;
+   justify-content: flex-end;
+   padding-right: 2rem;
+   color: #631837;
+}
+
+.next-btn span {
+   border: 1px solid #631837;
+   padding: 4px 12px;
+   border-radius: 4px;
+   background-color: pink;
+   cursor: pointer;
+   transition: 0.35s ease-in-out;
+}
+
+.post-card .prev-btn {
+   font-family: "Sean";
+   display: flex;
+   justify-content: flex-end;
+   padding-right: 2rem;
+   color: #631837;
+   cursor: pointer;
+}
+
+.prev-btn span {
+   border: 1px solid #631837;
+   padding: 4px 12px;
+   border-radius: 4px;
+   background-color: pink;
+   transition: 0.35s ease-in-out;
+}
+
+.high-resolution {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: "Sean";
+   font-size: 15px;
+   color: #631837;
+   border: 1px solid #631837;
+   background-color: pink;
+   margin: auto;
+   margin-top: 12px;
+   border-radius: 4px;
+   padding: 4px;
+   transition: 0.35s ease-in-out;
+   cursor: pointer;
+}
+
+.high-resolution:hover,
+.prev-btn span:hover,
+.next-btn span:hover {
+   transform: scale(0.95);
+   opacity: 0.8;
+}
+
+.high-resolution:hover a {
+   color: #631837;
+}
+
+@media (min-width: 768px) and (max-width: 819px) {
+   .post-card > .row {
+      position: relative;
+   }
+   .post-card .message {
+      font-size: 17px;
+   }
+}
+
+@media (min-width: 820px) {
+   .post-card > .row {
+      position: relative;
+   }
+   .post-card .message {
+      font-size: 2.1vh;
+   }
+
+   .post-card .next-btn {
+      font-size: 2.1vh;
+   }
+
+   .post-card .prev-btn {
+      font-size: 2.1vh;
+   }
+   .high-resolution {
+      font-size: 2.1vh;
+   }
+}
+
+@media (max-width: 576px) {
+   .post-card .message {
+      font-size: 15px;
+   }
+
+   /* .post-card .next-btn {
+      font-size: 15px;
+   }
+
+   .post-card .prev-btn {
+      font-size: 15px;
+   } */
+}
+
+@keyframes giftOpen {
+   0% {
+      transform: translateY(0);
+   }
+   10% {
+      transform: translateY(-5%);
+   }
+   20% {
+      transform: translateY(0%);
+   }
+   30% {
+      transform: translateY(-5%);
+   }
+   50% {
+      transform: rotate(-10deg) translateY(-50%);
+   }
+   75% {
+      transform: translate(-35%, -35%) rotate(-30deg);
+   }
+   100% {
+      transform: translate(-35%, 40%) rotate(-60deg);
+   }
+}
+
+.gift-top.open {
+   animation: giftOpen 1.5s ease-in-out forwards;
+}

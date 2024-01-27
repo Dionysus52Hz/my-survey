@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+@font-face {
+   font-family: "Rubik-Bold";
+   src: url(./Fonts/Rubik-Bold.ttf);
+}
+
+@font-face {
+   font-family: "Rubik-Regular";
+   src: url(./Fonts/Rubik-Regular.ttf);
+}
+
+:root {
+   --blue: #27c1fd;
+   --pink: #fd96b2;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: var(--pink);
+   color: var(--blue);
+   font-family: "Manrope", sans-serif;
+   font-weight: 500;
+}
+
+p,
+a {
+   margin: 0;
+}
+
+.header {
+   position: relative;
+   background-color: #fff;
+   padding: 24px;
+   padding-top: 48px;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   flex-direction: column;
+   row-gap: 12px;
+}
+
+.header .top {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 16px;
+   background-color: var(--blue);
+}
+
+.header .title {
+   font-size: 2rem;
+   font-family: "Rubik-Bold";
+}
+
+.header .term {
+   font-size: 1rem;
+}
+
+.section {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   margin-top: 16px;
+   background-color: #fff;
+   padding: 24px;
+   row-gap: 12px;
+}
+
+.section .sub-title {
+   font-family: "Rubik-Bold";
+   font-size: 18px;
+}
+
+.section .input {
+   border-bottom: 1px solid var(--blue);
+   padding: 4px 0;
+}
+
+.section input[type="text"] {
+   outline: none;
+   border: none;
+   font-size: 1rem;
+}
+
+::placeholder {
+   color: var(--blue);
+   opacity: 60%;
+   font-style: italic;
+}
+
+.section-1 .form-select {
+   outline: none;
+   color: var(--blue);
+   font-weight: 500;
+   transition: 0.2s ease-in-out;
+}
+
+.section-1 .form-select:focus {
+   box-shadow: none;
+}
+
+.form-check-input:checked {
+   background-color: var(--blue);
+   border-color: var(--blue);
+}
+
+.form-check {
+   margin-bottom: 8px;
+}
+
+.form-check input,
+.form-check label {
+   cursor: pointer;
+}
+
+.section-3 .form-check {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0;
+}
+
+.section-3 .form-check-input {
+   display: none;
+}
+
+.section-3 .form-check-label {
+   height: 48px;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   width: 160px;
+   border: 1px solid var(--blue);
+   border-radius: 8px;
+   margin: 12px;
+   transition: 0.2s ease-in-out;
+   font-family: "Rubik-Bold";
+}
+
+.section-3 .form-check-label i {
+   font-size: 1.5rem;
+}
+
+.section-3 .form-check-input:checked ~ .form-check-label {
+   background-color: var(--blue);
+}
+
+.section-3 .form-check-input:checked ~ .form-check-label {
+   color: #fff;
+}
+
+.footer {
+   margin-top: 16px;
+   color: #fff;
+   font-size: 1.2rem;
+}
+
+.footer a {
+   padding: 8px 24px;
+   font-size: 1rem;
+   border-radius: 8px;
+   background-color: var(--blue);
+   color: inherit;
+   text-transform: uppercase;
+   font-family: "Rubik-Bold";
+   border: none;
+   transition: 0.3s ease-in-out;
+}

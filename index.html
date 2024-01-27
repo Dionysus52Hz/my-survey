@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>My Survey</title>
+      <link rel="stylesheet" href="./Boostrap Files/CSS/bootstrap.min.css" />
+      <link rel="stylesheet" href="./style.css" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      />
+   </head>
+   <body>
+      <div
+         class="container-sm mt-3"
+         style="margin-bottom: 80px; max-width: 720px"
+      >
+         <div class="row ps-4 pe-4">
+            <div class="header col-12">
+               <div class="top"></div>
+               <p class="title">
+                  Khảo sát thói quen sử dụng mạng xã hội trong sinh viên
+               </p>
+               <p class="term">
+                  Mọi thông tin khảo sát điền vào biểu mẫu này được cam kết bảo
+                  mật và chỉ dùng phục vụ cho mục đích nghiên cứu.
+               </p>
+            </div>
+
+            <div class="section section-1 col-12">
+               <span class="sub-title col-12">Họ và tên:</span>
+               <span class="input col-12">
+                  <input type="text" placeholder="Câu trả lời của bạn" />
+               </span>
+               <span style="height: 12px"></span>
+               <span class="sub-title col-12">Năm sinh:</span>
+               <span class="input col-12">
+                  <input type="text" placeholder="Câu trả lời của bạn" />
+               </span>
+               <span style="height: 12px"></span>
+               <span class="sub-title col-12">Giới tính:</span>
+               <select class="form-select" aria-label="Default select example">
+                  <option selected>Chọn giới tính</option>
+                  <option value="1">Nữ</option>
+                  <option value="2">Nam</option>
+               </select>
+            </div>
+
+            <div class="section section-2 col-12">
+               <span class="sub-title col-12">Nhóm ngành đang theo học:</span>
+               <span class="col-12">
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="flexRadioDefault1"
+                        checked
+                     />
+                     <label class="form-check-label" for="flexRadioDefault1">
+                        Nhóm ngành công nghệ thông tin
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="flexRadioDefault2"
+                     />
+                     <label class="form-check-label" for="flexRadioDefault2">
+                        Nhóm ngành y - dược
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="flexRadioDefault3"
+                     />
+                     <label class="form-check-label" for="flexRadioDefault3">
+                        Nhóm ngành ngôn ngữ
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="flexRadioDefault4"
+                     />
+                     <label class="form-check-label" for="flexRadioDefault4">
+                        Nhóm ngành kinh tế
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="flexRadioDefault5"
+                     />
+                     <label class="form-check-label" for="flexRadioDefault5">
+                        Nhóm ngành điện - cơ khí
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="flexRadioDefault6"
+                     />
+                     <label class="form-check-label" for="flexRadioDefault6">
+                        Nhóm ngành giáo dục
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="flexRadioDefault7"
+                     />
+                     <label class="form-check-label" for="flexRadioDefault7">
+                        Nhóm ngành du lịch
+                     </label>
+                  </div>
+               </span>
+               <span style="height: 12px"></span>
+               <span class="sub-title col-12"
+                  >Bạn đang là sinh viên năm mấy?
+               </span>
+               <span class="col-12 container">
+                  <div class="row">
+                     <div class="form-check col-4">
+                        <input
+                           class="form-check-input"
+                           type="radio"
+                           name="year"
+                           id="flexRadioDefault8"
+                           checked
+                        />
+                        <label class="form-check-label" for="flexRadioDefault8">
+                           Năm 1
+                        </label>
+                     </div>
+                     <div class="form-check col-4">
+                        <input
+                           class="form-check-input"
+                           type="radio"
+                           name="year"
+                           id="flexRadioDefault9"
+                        />
+                        <label class="form-check-label" for="flexRadioDefault9">
+                           Năm 2
+                        </label>
+                     </div>
+                     <div class="form-check col-4">
+                        <input
+                           class="form-check-input"
+                           type="radio"
+                           name="year"
+                           id="flexRadioDefault10"
+                        />
+                        <label
+                           class="form-check-label"
+                           for="flexRadioDefault10"
+                        >
+                           Năm 3
+                        </label>
+                     </div>
+                     <div class="form-check col-4">
+                        <input
+                           class="form-check-input"
+                           type="radio"
+                           name="year"
+                           id="flexRadioDefault11"
+                        />
+                        <label
+                           class="form-check-label"
+                           for="flexRadioDefault11"
+                        >
+                           Năm 4
+                        </label>
+                     </div>
+                     <div class="form-check col-4">
+                        <input
+                           class="form-check-input"
+                           type="radio"
+                           name="year"
+                           id="flexRadioDefault12"
+                        />
+                        <label
+                           class="form-check-label"
+                           for="flexRadioDefault12"
+                        >
+                           Năm 5
+                        </label>
+                     </div>
+                     <div class="form-check col-4">
+                        <input
+                           class="form-check-input"
+                           type="radio"
+                           name="year"
+                           id="flexRadioDefault13"
+                        />
+                        <label
+                           class="form-check-label"
+                           for="flexRadioDefault13"
+                        >
+                           Năm 6
+                        </label>
+                     </div>
+                  </div>
+               </span>
+            </div>
+
+            <div class="section section-3 col-12">
+               <span class="sub-title col-12"
+                  >Bạn đang sử dụng những mạng xã hội nào dưới đây?
+               </span>
+               <span style="font-style: italic"
+                  >(Có thể chọn nhiều phương án)</span
+               >
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="form-check col-6 col-sm-6 col-md-6 col-lg-4">
+                        <input
+                           class="form-check-input"
+                           type="checkbox"
+                           value=""
+                           id="youtube"
+                        />
+                        <label class="form-check-label" for="youtube">
+                           <span>
+                              <i class="fa-brands fa-youtube"></i>
+                           </span>
+                           <span>Youtube</span>
+                        </label>
+                     </div>
+                     <div class="form-check col-6 col-sm-6 col-md-6 col-lg-4">
+                        <input
+                           class="form-check-input"
+                           type="checkbox"
+                           value=""
+                           id="facebook"
+                        />
+                        <label class="form-check-label" for="facebook">
+                           <span>
+                              <i class="fa-brands fa-facebook-f"></i>
+                           </span>
+                           <span>Facebook</span>
+                        </label>
+                     </div>
+                     <div class="form-check col-6 col-sm-6 col-md-6 col-lg-4">
+                        <input
+                           class="form-check-input"
+                           type="checkbox"
+                           value=""
+                           id="tiktok"
+                        />
+                        <label class="form-check-label" for="tiktok">
+                           <span>
+                              <i class="fa-brands fa-tiktok"></i>
+                           </span>
+                           <span>Tiktok</span>
+                        </label>
+                     </div>
+                     <div class="form-check col-6 col-sm-6 col-md-6 col-lg-4">
+                        <input
+                           class="form-check-input"
+                           type="checkbox"
+                           value=""
+                           id="ig"
+                        />
+                        <label class="form-check-label" for="ig">
+                           <span>
+                              <i class="fa-brands fa-instagram"></i>
+                           </span>
+                           <span>Instagram</span>
+                        </label>
+                     </div>
+                     <div class="form-check col-6 col-sm-6 col-md-6 col-lg-4">
+                        <input
+                           class="form-check-input"
+                           type="checkbox"
+                           value=""
+                           id="threads"
+                        />
+                        <label class="form-check-label" for="threads">
+                           <span>
+                              <i class="fa-brands fa-threads"></i>
+                           </span>
+                           <span>Threads</span>
+                        </label>
+                     </div>
+                     <div class="form-check col-6 col-sm-6 col-md-6 col-lg-4">
+                        <input
+                           class="form-check-input"
+                           type="checkbox"
+                           value=""
+                           id="twt"
+                        />
+                        <label class="form-check-label" for="twt">
+                           <span>
+                              <i class="fa-brands fa-twitter"></i>
+                           </span>
+                           <span>Twitter</span>
+                        </label>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="section section-4 col-12">
+               <span class="sub-title col-12"
+                  >Bạn sử dụng những loại mạng xã hội nói trên trung bình bao
+                  nhiêu giờ mỗi ngày?</span
+               >
+               <span style="font-style: italic"
+                  >(Đối với loại nào bạn không sử dụng, có thể bỏ qua hoặc lựa
+                  chọn phương án "không sử dụng")</span
+               >
+               <span class="sub-title col-12">1. Youtube:</span>
+               <span class="col-12">
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="yt"
+                        id="1"
+                     />
+                     <label class="form-check-label" for="1">
+                        Dưới 1h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="yt"
+                        id="2"
+                     />
+                     <label class="form-check-label" for="2">
+                        Từ 1 - 2h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="yt"
+                        id="3"
+                     />
+                     <label class="form-check-label" for="3">
+                        Từ 2 - 3h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="yt"
+                        id="4"
+                     />
+                     <label class="form-check-label" for="4">
+                        Trên 3h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="yt"
+                        id="5"
+                     />
+                     <label class="form-check-label" for="5">
+                        Không sử dụng mạng xã hội này
+                     </label>
+                  </div>
+               </span>
+               <span style="height: 12px"></span>
+               <span class="sub-title col-12">2. Facebook:</span>
+               <span class="col-12">
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="fb"
+                        id="6"
+                     />
+                     <label class="form-check-label" for="6">
+                        Dưới 1h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="fb"
+                        id="7"
+                     />
+                     <label class="form-check-label" for="7">
+                        Từ 1 - 2h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="fb"
+                        id="8"
+                     />
+                     <label class="form-check-label" for="8">
+                        Từ 2 - 3h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="fb"
+                        id="9"
+                     />
+                     <label class="form-check-label" for="9">
+                        Trên 3h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="fb"
+                        id="10"
+                     />
+                     <label class="form-check-label" for="10">
+                        Không sử dụng mạng xã hội này
+                     </label>
+                  </div>
+               </span>
+               <span style="height: 12px"></span>
+               <span class="sub-title col-12">3. Tiktok:</span>
+               <span class="col-12">
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tt"
+                        id="11"
+                     />
+                     <label class="form-check-label" for="11">
+                        Dưới 1h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tt"
+                        id="12"
+                     />
+                     <label class="form-check-label" for="12">
+                        Từ 1 - 2h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tt"
+                        id="13"
+                     />
+                     <label class="form-check-label" for="13">
+                        Từ 2 - 3h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tt"
+                        id="14"
+                     />
+                     <label class="form-check-label" for="14">
+                        Trên 3h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tt"
+                        id="15"
+                     />
+                     <label class="form-check-label" for="15">
+                        Không sử dụng mạng xã hội này
+                     </label>
+                  </div>
+               </span>
+               <span style="height: 12px"></span>
+               <span class="sub-title col-12">4. Instagram:</span>
+               <span class="col-12">
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="igs"
+                        id="16"
+                     />
+                     <label class="form-check-label" for="16">
+                        Dưới 1h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="igs"
+                        id="17"
+                     />
+                     <label class="form-check-label" for="17">
+                        Từ 1 - 2h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="igs"
+                        id="18"
+                     />
+                     <label class="form-check-label" for="18">
+                        Từ 2 - 3h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="igs"
+                        id="19"
+                     />
+                     <label class="form-check-label" for="19">
+                        Trên 3h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="igs"
+                        id="20"
+                     />
+                     <label class="form-check-label" for="20">
+                        Không sử dụng mạng xã hội này
+                     </label>
+                  </div>
+               </span>
+               <span style="height: 12px"></span>
+               <span class="sub-title col-12">5. Threads:</span>
+               <span class="col-12">
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="thr"
+                        id="21"
+                     />
+                     <label class="form-check-label" for="21">
+                        Dưới 1h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="thr"
+                        id="22"
+                     />
+                     <label class="form-check-label" for="22">
+                        Từ 1 - 2h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="thr"
+                        id="23"
+                     />
+                     <label class="form-check-label" for="23">
+                        Từ 2 - 3h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="thr"
+                        id="24"
+                     />
+                     <label class="form-check-label" for="24">
+                        Trên 3h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="thr"
+                        id="25"
+                     />
+                     <label class="form-check-label" for="25">
+                        Không sử dụng mạng xã hội này
+                     </label>
+                  </div>
+               </span>
+               <span style="height: 12px"></span>
+               <span class="sub-title col-12">6. Twitter:</span>
+               <span class="col-12">
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tw"
+                        id="26"
+                     />
+                     <label class="form-check-label" for="26">
+                        Dưới 1h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tw"
+                        id="27"
+                     />
+                     <label class="form-check-label" for="27">
+                        Từ 1 - 2h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tw"
+                        id="28"
+                     />
+                     <label class="form-check-label" for="28">
+                        Từ 2 - 3h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tw"
+                        id="29"
+                     />
+                     <label class="form-check-label" for="29">
+                        Trên 3h mỗi ngày
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tw"
+                        id="30"
+                     />
+                     <label class="form-check-label" for="30">
+                        Không sử dụng mạng xã hội này
+                     </label>
+                  </div>
+               </span>
+            </div>
+
+            <div class="footer col-12">
+               <div class="container-fluid">
+                  <div class="row">
+                     <span class="col-6" style="font-style: italic">
+                        <span>Trang</span>
+                        <span style="color: var(--blue)">1</span>
+                        <span style="color: var(--blue)">/</span>
+                        <span style="color: var(--blue)">2</span>
+                     </span>
+
+                     <span class="col-6 d-flex justify-content-end">
+                        <a href="./gift.html" class="btn btn-primary">
+                           Tiếp tục
+                        </a>
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="./Boostrap Files//JS/bootstrap.bundle.min.js"></script>
+      <script src="./index.js"></script>
+   </body>
+</html>
