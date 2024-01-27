@@ -86,7 +86,6 @@ a {
    overflow: hidden;
    flex-direction: column;
    justify-content: flex-end;
-   gap: 16px;
    box-shadow: 0 0 20px rgba(0, 0, 0, 0.462);
 }
 
@@ -242,6 +241,7 @@ a {
 
 .post-card .image {
    width: 100%;
+   aspect-ratio: 1 / 1;
    height: fit-content;
    overflow: hidden;
 }
@@ -261,18 +261,20 @@ a {
 }
 
 .post-card .message {
-   font-size: 15px;
+   font-size: 2.1vh;
    color: #631837;
    font-family: "Sean";
-   padding: 8px 16px;
+   padding: 8px;
 }
 
 .post-card .next-btn {
    font-family: "Sean";
    display: flex;
    justify-content: flex-end;
-   padding-right: 2rem;
    color: #631837;
+   position: absolute;
+   bottom: 4%;
+   right: 10%;
 }
 
 .next-btn span {
@@ -282,13 +284,14 @@ a {
    background-color: pink;
    cursor: pointer;
    transition: 0.35s ease-in-out;
+   font-size: 2.1vh;
 }
 
 .post-card .prev-btn {
    font-family: "Sean";
    display: flex;
    justify-content: flex-end;
-   padding-right: 2rem;
+   padding-right: 4%;
    color: #631837;
    cursor: pointer;
 }
@@ -299,6 +302,7 @@ a {
    border-radius: 4px;
    background-color: pink;
    transition: 0.35s ease-in-out;
+   font-size: 2.1vh;
 }
 
 .high-resolution {
@@ -306,12 +310,12 @@ a {
    justify-content: center;
    align-items: center;
    font-family: "Sean";
-   font-size: 15px;
+   font-size: 2.1vh;
    color: #631837;
    border: 1px solid #631837;
    background-color: pink;
    margin: auto;
-   margin-top: 12px;
+   margin-top: 4%;
    border-radius: 4px;
    padding: 4px;
    transition: 0.35s ease-in-out;
@@ -332,9 +336,6 @@ a {
 @media (min-width: 768px) and (max-width: 819px) {
    .post-card > .row {
       position: relative;
-   }
-   .post-card .message {
-      font-size: 17px;
    }
 }
 
